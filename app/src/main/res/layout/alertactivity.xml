@@ -73,10 +73,11 @@
             android:layout_margin="15dp"
             android:background="@drawable/customborder"
             android:layout_height="0dp">
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:textColor="#8d8d8d"
+                android:background="@android:color/transparent"
                 android:text="Description(optional)"
                 android:layout_height="match_parent" />
 
