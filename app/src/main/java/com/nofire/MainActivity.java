@@ -14,8 +14,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CardView mActivitiesCardView;
-    private Button mReportFireButton;
     private RecyclerView mActivitiesRecyclerView;
     private ArrayList<Tweet> mTweets = new ArrayList<>();
 
@@ -24,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mActivitiesCardView = findViewById(R.id.cardview_twits);
-        mReportFireButton = findViewById(R.id.alertButton);
+        CardView mActivitiesCardView = findViewById(R.id.cardview_twits);
+        Button mReportFireButton = findViewById(R.id.alertButton);
 
         ProgressBar progressBar =  findViewById(R.id.probability_progress_bar);
         mActivitiesCardView.setOnClickListener(v -> {
