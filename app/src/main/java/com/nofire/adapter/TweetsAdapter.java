@@ -1,5 +1,6 @@
 package com.nofire.adapter;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,15 +15,16 @@ import java.util.List;
 
 public class TweetsAdapter extends RecyclerView.Adapter <BaseViewHolder>  {
 
-    List<Tweet> items;
+    private List<Tweet> mTweets;
 
-    public TweetsAdapter(List<Tweet>items){
-        this.items=items;
+    public TweetsAdapter(List<Tweet> mTweets){
+        this.mTweets = mTweets;
 
     }
 
+    @NonNull
     @Override
-    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.twit_format,parent,false);
         return new TweetViewHolder(view);
 
@@ -30,13 +32,13 @@ public class TweetsAdapter extends RecyclerView.Adapter <BaseViewHolder>  {
 
     @SuppressWarnings("unchecked")
     @Override
-    public void onBindViewHolder(BaseViewHolder holder, final int position) {
-        holder.bind(items.get(position));
+    public void onBindViewHolder(@NonNull BaseViewHolder holder, final int position) {
+        holder.bind(mTweets.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return mTweets.size();
     }
 
 
