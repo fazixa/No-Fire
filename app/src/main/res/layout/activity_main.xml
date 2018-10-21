@@ -40,6 +40,7 @@
             android:layout_width="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:elevation="6dp"
             android:background="@drawable/element_button_orange"
             android:layout_height="150dp" />
 
@@ -50,6 +51,23 @@
         android:layout_height="0dp"
         android:layout_weight="0.15"
         >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="match_parent">
+           <TextView
+               android:layout_width="match_parent"
+               android:text="Fire probability in your area"
+               android:layout_marginLeft="5dp"
+               android:layout_gravity="left"
+               android:textColor="#FF6131"
+               android:layout_height="20dp"
+                   >
+           </TextView>
+
+
+        </android.support.v7.widget.CardView>
 
     </LinearLayout>
     <LinearLayout
@@ -83,7 +101,7 @@
                 android:textColor="#8d8d8d"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:text="Hassan: There was a  fire on Sakman tower"
+                android:text="Hassan: There was a  fire on Salman tower"
                 android:layout_height="73dp" />
             <TextView
                 android:layout_width="match_parent"
