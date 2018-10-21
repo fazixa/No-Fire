@@ -15,7 +15,7 @@ import com.behkha.progresstracker.ProgressTracker;
 
 public class MainActivity extends AppCompatActivity {
     private CardView cardview;
-    private Button alertButton;
+    private Button alertButton ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
