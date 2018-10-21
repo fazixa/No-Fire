@@ -18,7 +18,7 @@
         android:layout_height="60dp" />
     <TextView
         android:layout_width="match_parent"
-        android:textColor="#FFFFFFF"
+        android:textColor="#FFFFFF"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_height="2dp" />

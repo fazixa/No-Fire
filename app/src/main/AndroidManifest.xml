@@ -16,23 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
+
         <activity android:name=".TwitActivity"></activity>
         <activity
             android:name=".AlertActivity"
             android:theme="@style/alertActivityTheme"></activity>
         <activity android:name=".FirefighterActivity"></activity>
-=======
-        <activity android:name=".TwitActivity">
-
-        </activity>
-        <activity android:name=".AlertActivity"
-            android:theme="@style/alertActivityTheme"
-            >
-
-        </activity>
         <activity android:name=".LoginActivity" />
->>>>>>> Stashed changes
+
     </application>
 
 </manifest>
