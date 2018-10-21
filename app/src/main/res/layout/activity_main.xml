@@ -83,7 +83,7 @@
                 android:textColor="#8d8d8d"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:text="Hassan: There was a fire on Sakman tower"
+                android:text="Hassan: There was a  fire on Sakman tower"
                 android:layout_height="73dp" />
             <TextView
                 android:layout_width="match_parent"
