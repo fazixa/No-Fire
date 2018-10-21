@@ -4,8 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
-import com.nofire.adapter.TweetsAdapter;
+import com.nofire.adapter.*;
 import com.nofire.Item.Tweet;
 
 import java.util.ArrayList;
@@ -13,7 +12,8 @@ import java.util.ArrayList;
 public class TwitActivity extends AppCompatActivity {
     public ArrayList<Tweet> arrayList=new ArrayList<>();
     private RecyclerView recycle ;
-    private TweetsAdapter twitadapter;
+    private com.nofire.adapter.TweetsAdapter twitadapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class TwitActivity extends AppCompatActivity {
         arrayList.add(twit1);
         Tweet twit2 = new Tweet("we show fire in los vegas");
 
-        twitadapter = new TweetsAdapter(arrayList);
+        twitadapter = new com.nofire.adapter.TweetsAdapter(arrayList);
         arrayList.add(twit2);
         recycle.setAdapter(twitadapter);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(TwitActivity.this);

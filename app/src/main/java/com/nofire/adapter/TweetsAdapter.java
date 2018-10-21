@@ -1,57 +1,44 @@
-package com.nofire.Adapter;
+package com.nofire.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nofire.Item.Twit_Item;
-import com.nofire.Item.setViewHolder;
-import com.nofire.OnTapListener;
+import com.nofire.Item.Tweet;
+import com.nofire.Item.TweetViewHolder;
 import com.nofire.R;
+import com.nofire.adapter.viewHolders.BaseViewHolder;
 
-import java.util.Collections;
 import java.util.List;
 
-public class TwiterAdapter extends RecyclerView.Adapter <setViewHolder>  {
+public class TweetsAdapter extends RecyclerView.Adapter <BaseViewHolder>  {
 
-    List<Twit_Item> items= Collections.emptyList();
-    private OnTapListener onTapListener;
-    public TwiterAdapter(List<Twit_Item>items){
+    List<Tweet> items;
+
+    public TweetsAdapter(List<Tweet>items){
         this.items=items;
 
     }
 
     @Override
-    public setViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.twit_format,parent,false);
-        return new setViewHolder(view);
+        return new TweetViewHolder(view);
 
     }
+
+    @SuppressWarnings("unchecked")
     @Override
-    public void onBindViewHolder(setViewHolder holder, final int position) {
-        holder.getTxtname().setText(items.get(position).getText());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(onTapListener!=null){
-                    onTapListener.OnTapView(position);
-                }
-
-            }
-        });
-
+    public void onBindViewHolder(BaseViewHolder holder, final int position) {
+        holder.bind(items.get(position));
     }
 
     @Override
     public int getItemCount() {
         return items.size();
     }
-    public void setOnTapListener(OnTapListener onTapListener){
-        this.onTapListener=onTapListener;
 
-    }
 
 
 

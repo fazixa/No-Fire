@@ -8,8 +8,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.ProgressBar;
-
-import com.nofire.adapter.TweetsAdapter;
 import com.nofire.Item.Tweet;
 
 import java.util.ArrayList;
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mActivitiesRecyclerView = findViewById(R.id.activities_recycler_view);
         mTweets.add(new Tweet("activity one activity one activity one activity one activity one activity one activity one activity one activity one activity one vactivity one activity one vactivity one activity one activity one"));
         mTweets.add(new Tweet("activity two"));
-        TweetsAdapter tweetsAdapter = new TweetsAdapter(mTweets);
+        com.nofire.Adapter.TweetsAdapter tweetsAdapter = new com.nofire.Adapter.TweetsAdapter(mTweets);
         mActivitiesRecyclerView.setAdapter(tweetsAdapter);
         mActivitiesRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
 
