@@ -17,6 +17,8 @@ import java.io.UnsupportedEncodingException;
 public class RequestManager {
 
     private RequestQueue requestQueue;
+    public static final String DOMAIN = "";
+
 
     public RequestManager(Context context) {
         if (this.requestQueue == null)

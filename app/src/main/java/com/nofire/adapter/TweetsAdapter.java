@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nofire.Item.Tweet;
-import com.nofire.Item.TweetViewHolder;
 import com.nofire.R;
 import com.nofire.adapter.viewHolders.BaseViewHolder;
+import com.nofire.adapter.viewHolders.TweetViewHolder;
 
 import java.util.List;
 

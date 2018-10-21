@@ -1,8 +1,9 @@
-package com.nofire.Item;
+package com.nofire.adapter.viewHolders;
 
 import android.view.View;
 import android.widget.TextView;
 
+import com.nofire.Item.Tweet;
 import com.nofire.R;
 import com.nofire.adapter.viewHolders.BaseViewHolder;
 

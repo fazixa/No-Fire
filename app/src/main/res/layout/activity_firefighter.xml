@@ -16,15 +16,18 @@
         android:gravity="center|left"
         android:layout_marginRight="15dp"
         android:layout_height="60dp" />
-    <TextView
+    <View
         android:layout_width="match_parent"
-        android:textColor="#FFFFFF"
+        android:background="#fff"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_height="2dp" />
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/reports_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:listitem="@layout/firefighter_list_item"
+        >
 
     </android.support.v7.widget.RecyclerView>
 

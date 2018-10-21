@@ -9,6 +9,7 @@
         android:orientation="horizontal"
         android:layout_height="match_parent">
         <ImageView
+            android:id="@+id/report_image"
             android:layout_width="0dp"
             android:src="@drawable/fire"
             android:layout_margin="10dp"
@@ -16,6 +17,7 @@
             android:layout_weight="0.4"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/report_description"
             android:layout_width="0dp"
             android:text="There is a colfigranation in California Los Angles help .."
             android:layout_weight="0.4"
@@ -24,6 +26,7 @@
             android:textColor="#8d8d8d"
             android:layout_height="match_parent" />
         <Button
+            android:id="@+id/report_confirm"
             android:layout_width="0dp"
             android:layout_marginTop="60dp"
             android:layout_marginRight="10dp"
