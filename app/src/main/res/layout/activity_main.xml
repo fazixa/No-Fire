@@ -1,18 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_red_grad"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="367dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/element_pin" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:gravity="bottom|left"
+            android:text="Mashhad"
+            android:textColor="#FFFF"
+            android:textSize="22sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@drawable/element_map"
+        >
+        <Button
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/element_button_orange"
+            android:layout_height="150dp" />
 
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="25dp"
+            android:layout_height="match_parent"
+            >
+           <TextView
+               android:layout_width="match_parent"
+               android:text="Tweet Activities"
+               android:layout_gravity="left"
+               android:layout_marginLeft="5dp"
+               android:textColor="#FF6131"
+               android:textSize="20dp"
+               android:layout_height="30dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="#FF6131"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="2dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="32dp"
+                android:textColor="#8d8d8d"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Hassan: There was a fire on Sakman tower"
+                android:layout_height="73dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="105dp"
+                android:background="#8d8d8d"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="2dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="107dp"
+                android:layout_height="72dp" />
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
