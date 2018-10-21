@@ -19,6 +19,7 @@
             android:layout_height="30dp"
             android:src="@drawable/element_pin" />
 
+<<<<<<< Updated upstream
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -43,6 +44,8 @@
             android:elevation="6dp"
             android:background="@drawable/element_button_orange"
             android:layout_height="150dp" />
+=======
+>>>>>>> Stashed changes
 
     </LinearLayout>
 
