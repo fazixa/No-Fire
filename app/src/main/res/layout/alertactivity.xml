@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.85"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:gravity="center|left"
+                android:layout_marginLeft="20dp"
+                android:text="Report A Fire"
+                android:textColor="#FF6131"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/danger"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.4"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_weight="0.68"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/customborder"
+            android:layout_height="0dp">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_gravity="center"
+                android:src="@drawable/camera"
+                android:layout_height="45dp" />
+            <TextView
+                android:layout_width="150dp"
+                android:text="Photo of Fire Scene"
+                android:gravity="center"
+                android:textColor="#8d8d8d"
+                android:layout_height="35dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.42"
+            android:layout_margin="15dp"
+            android:background="@drawable/customborder"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#8d8d8d"
+                android:text="Description(optional)"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Select the incident type"
+            android:layout_margin="15dp"
+            android:gravity="center|left"
+            android:layout_height="35dp" />
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="40dp">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="0dp">
+        <Button
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:text="Submit"
+            android:background="#FF6F43"
+            android:textColor="#FFFF"
+            android:layout_gravity="center"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
