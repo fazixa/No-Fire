@@ -16,14 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TwitActivity">
-
-        </activity>
-        <activity android:name=".AlertActivity"
-            android:theme="@style/alertActivityTheme"
-            >
-
-        </activity>
+        <activity android:name=".TwitActivity"></activity>
+        <activity
+            android:name=".AlertActivity"
+            android:theme="@style/alertActivityTheme"></activity>
+        <activity android:name=".FirefighterActivity"></activity>
     </application>
 
 </manifest>

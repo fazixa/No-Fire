@@ -4,14 +4,11 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,8 +20,6 @@ import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,9 +30,7 @@ public class AlertActivity extends AppCompatActivity {
     private Spinner spnIncidentType;
     private ArrayList<String> incidentTypeList;
 
-
     int TAKE_PHOTO_CODE = 0;
-    public static int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +51,7 @@ public class AlertActivity extends AppCompatActivity {
         incidentTypeList.add("Jungle fire");
         incidentTypeList.add("Large smoke cloud");
         incidentTypeList.add("possible fire danger");
-        ArrayAdapter<String> spinnerCountShoesArrayAdapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> spinnerCountShoesArrayAdapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_spinner_dropdown_item,
                 incidentTypeList);
         spnIncidentType.setAdapter(spinnerCountShoesArrayAdapter);
@@ -70,21 +63,24 @@ public class AlertActivity extends AppCompatActivity {
 
         if (requestCode == TAKE_PHOTO_CODE && resultCode == RESULT_OK) {
             Log.d("CameraDemo", "Pic saved");
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            ivCaptured.setImageBitmap(photo);
+            Bundle extras = data.getExtras();
+            if (extras != null) {
+                Bitmap photo = (Bitmap) extras.get("data");
+                ivCaptured.setImageBitmap(photo);
+            }
         }
     }
 
-    private void onCaptureCreated(){
+    private void onCaptureCreated() {
         if (hasPermission())
-             capture();
+            capture();
         else
             requestPermission();
     }
 
-    private void requestPermission(){
+    private void requestPermission() {
         Dexter.withActivity(this)
-                .withPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE)
+                .withPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
                 .withListener(new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -98,32 +94,16 @@ public class AlertActivity extends AppCompatActivity {
                 }).check();
     }
 
-    private void capture(){
-        final String dir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES) + "/picFolder/";
-        File newdir = new File(dir);
-        newdir.mkdirs();
-        count++;
-        String file = dir + count + ".jpg";
-        File newfile = new File(file);
-        try {
-            newfile.createNewFile();
-        } catch (IOException e) {
-        }
-
-        Uri outputFileUri = Uri.fromFile(newfile);
-
+    private void capture() {
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
-
         startActivityForResult(cameraIntent, TAKE_PHOTO_CODE);
     }
 
-    private boolean hasPermission(){
+    private boolean hasPermission() {
         String writePermission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
         String readPermission = Manifest.permission.READ_EXTERNAL_STORAGE;
-        int writePermissionResult = ContextCompat.checkSelfPermission( getApplicationContext() , writePermission);
-        int readPermissionResult = ContextCompat.checkSelfPermission( getApplicationContext(), readPermission);
+        int writePermissionResult = ContextCompat.checkSelfPermission(getApplicationContext(), writePermission);
+        int readPermissionResult = ContextCompat.checkSelfPermission(getApplicationContext(), readPermission);
         return writePermissionResult == PackageManager.PERMISSION_GRANTED && readPermissionResult == PackageManager.PERMISSION_GRANTED;
     }
 }
