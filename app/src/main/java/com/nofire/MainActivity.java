@@ -3,6 +3,7 @@ package com.nofire;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.widget.ProgressBar;
 
@@ -13,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
         ProgressBar progressBar =  findViewById(R.id.probability_progress_bar);
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         progressTracker.setTrackerColor(Color.BLACK);
         progressBar.setOnClickListener( v -> {
             progressBar.setProgress(progressBar.getProgress() + 5);
-            progressTracker.setProgress(progressBar.getProgress());
+            progressTracker.setProgress(progressBar.getProgress() * 15);
         });
 
     }

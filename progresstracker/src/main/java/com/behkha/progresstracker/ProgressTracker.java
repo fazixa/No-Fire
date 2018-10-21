@@ -62,7 +62,7 @@ public class ProgressTracker extends View {
     }
 
     public void setProgress(int progress){
-        if (progress < 0 || progress > 100 || this.progress == progress)
+        if (this.progress == progress)
             return;
         this.progress = progress;
         invalidate();
