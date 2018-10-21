@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mActivitiesRecyclerView = findViewById(R.id.activities_recycler_view);
         mTweets.add(new Tweet("activity one activity one activity one activity one activity one activity one activity one activity one activity one activity one vactivity one activity one vactivity one activity one activity one"));
         mTweets.add(new Tweet("activity two"));
-        com.nofire.Adapter.TweetsAdapter tweetsAdapter = new com.nofire.Adapter.TweetsAdapter(mTweets);
+        com.nofire.adapter.TweetsAdapter tweetsAdapter = new com.nofire.adapter.TweetsAdapter(mTweets);
         mActivitiesRecyclerView.setAdapter(tweetsAdapter);
         mActivitiesRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
 
